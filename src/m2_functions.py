@@ -3,12 +3,12 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Xiaoyu Ma.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# Done: 2.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -32,9 +32,11 @@ def main():
     window = rg.TurtleWindow()
 
     turtle1()
+    turtle4()
     turtle3()
     turtle2()
     turtle2()
+    turtle5()
 
     window.close_on_mouse_click()
 
@@ -104,9 +106,59 @@ def turtle3():
     maja.end_fill()
 
 
+def turtle4():
+    oliver = rg.SimpleTurtle('classic')
+    oliver.speed = 20
+    oliver.pen = rg.Pen('light coral', 5)
+
+    radius = 30
+
+    oliver.pen_up()
+    oliver.right(90)
+    oliver.forward(30)
+    oliver.left(90)
+    oliver.pen_down()
+
+    for i in range(10):
+        oliver.draw_circle(radius)
+        oliver.right(90)
+        oliver.pen_up()
+        oliver.forward(20)
+        oliver.pen_down()
+        oliver.left(90)
+        radius += 20
+
+
+def turtle5():
+    joye = rg.SimpleTurtle()
+    enrico = rg.SimpleTurtle()
+
+    joye.speed = 10
+    enrico.speed = 13
+
+    joye.pen = rg.Pen('grey', 15)
+    enrico.pen = rg.Pen('light blue', 3)
+
+    length = 200
+
+    for i in range(10):
+        enrico.draw_square(length)
+        length -= 20
+
+    joye.pen_up()
+    joye.backward(250)
+    joye.pen_down()
+
+    for k in range(3):
+        joye.begin_fill()
+        joye.draw_regular_polygon(3,50)
+        joye.end_fill()
+        joye.left(120)
+
+
 ###############################################################################
 #
-# TODO: 3.
+# DONE: 3.
 #   READ the code above.  Be sure you understand:
 #     -- How many functions are defined above?
 #           (Answer: 4)
@@ -138,7 +190,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 4.
+# DONE: 4.
 #   Define another function,
 #   immediately below the end of the definition of   turtle3   above.
 #   Name your new function   turtle4.
@@ -168,7 +220,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   Add a line to   main   that CALLS your new function immediately
 #   AFTER  main  calls turtle1.  So:
 #     -- the SimpleTurtle from turtle1 should move,
@@ -184,7 +236,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 6.
+# DONE: 6.
 #   The previous two TODOs IMPLEMENTED a function (TO-DO 4)
 #   and TESTED that function (TO-DO 5).
 #
@@ -211,7 +263,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 7.
+# DONE: 7.
 #   COMMIT and PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
