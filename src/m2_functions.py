@@ -151,7 +151,7 @@ def turtle5():
 
     for k in range(3):
         joye.begin_fill()
-        joye.draw_regular_polygon(3,50)
+        joye.draw_regular_polygon(3, 50)
         joye.end_fill()
         joye.left(120)
 
